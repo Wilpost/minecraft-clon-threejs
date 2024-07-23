@@ -1,7 +1,10 @@
 export function ShorcutTablerHelper() {
   return (
     <article className='modal_helper_container'>
-      <img src='../../public/logo.png' alt='' />
+      <img
+        src='https://i.ibb.co/V2DRQkJ/b9771c6d3c791e5d112820978442b786-removebg-preview.png'
+        alt='view logo'
+      />
       <div className='shorcut_helper'>
         <p>
           <strong>Click</strong> - Create cube
