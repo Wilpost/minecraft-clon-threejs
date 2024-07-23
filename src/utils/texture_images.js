@@ -1,0 +1,5 @@
+export { default as grassTexture } from '/public/grass.jpg'
+export { default as dirtTexture } from '/public/dirt.jpg'
+export { default as glassTexture } from '/public/glass.png'
+export { default as woodTexture } from '/public/wood.png'
+export { default as logTexture } from '/public/log.jpg'
