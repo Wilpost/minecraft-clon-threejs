@@ -90,6 +90,41 @@ html,
   animation-fill-mode: both;
 }
 
+.modal_helper_container {
+  background-color: #00000048;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+}
+
+.shorcut_helper {
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url(public\Fonts\minecraft_font.ttf);
+}
+
+.shorcut_helper > p {
+  font-family: 'Minecraft', sans-serif;
+  color: white;
+  background: #333;
+  padding: 10px;
+  border: 2px outset #000;
+  border-radius: 4px;
+}
+
 @media (max-width: 750px) {
   .mobile_actions_tabler {
     display: block;

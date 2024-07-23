@@ -10,7 +10,7 @@ export function Ground() {
 
   const [addCube, texture] = useStore(state => [state.addCube, state.texture])
 
-  groundTexture.repeat.set(100, 100)
+  groundTexture.repeat.set(200, 200)
 
   return (
     <mesh
@@ -21,7 +21,7 @@ export function Ground() {
         addCube([x, y, z], texture)
       }}
       ref={ref}>
-      <planeGeometry attach='geometry' args={[100, 100]} />
+      <planeGeometry attach='geometry' args={[300, 300]} />
       <meshStandardMaterial attach='material' map={groundTexture} />
     </mesh>
   )

@@ -7,19 +7,41 @@ import { Player } from './Components/Player'
 import { Cubes } from './Components/Cubes'
 import { TextureSelector } from './Components/TextureSelector'
 import { useGameFeatures } from './hooks/useGameFeatures'
+import { ShorcutTablerHelper } from './Components/ShorcutsTablerHelp'
+import { useState } from 'react'
 
 function App() {
+  const [viewHelper, setViewHelper] = useState(false)
   const { reset, saveDeparture } = useGameFeatures()
   return (
     <>
       <div className='game_state_contianer'>
-        <button className='save_button' onClick={saveDeparture}>
+        <button
+          className='save_button'
+          onClick={e => {
+            e.stopPropagation()
+            saveDeparture()
+          }}>
           Save
         </button>
-        <button onClick={reset} className='reset_button'>
+        <button
+          onClick={e => {
+            e.stopPropagation()
+            reset()
+          }}
+          className='reset_button'>
           Reset
         </button>
+        <button
+          onClick={e => {
+            e.stopPropagation()
+            setViewHelper(!viewHelper)
+          }}
+          className='reset_button'>
+          {viewHelper ? 'Close' : 'Help'}
+        </button>
       </div>
+
       <Canvas>
         <Sky />
         <ambientLight />
@@ -32,6 +54,8 @@ function App() {
       </Canvas>
       <div className='pointer'>+</div>
       <TextureSelector />
+
+      {viewHelper && <ShorcutTablerHelper />}
 
       <div className='mobile_actions_tabler'>
         <div>left</div>
